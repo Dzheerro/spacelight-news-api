@@ -13,5 +13,9 @@ export class ActionService {
   getArticles() {
     return this.http.get(`${this.baseUrl}/v4/articles`);
   }
+
+  getArticleById(id: number) {
+    return this.http.get(`${this.baseUrl}/v4/articles/${id}`);
+  }
   
 }
