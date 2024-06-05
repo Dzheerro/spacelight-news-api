@@ -6,7 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class ActionService {
 
+  baseUrl: string = 'https://api.spaceflightnewsapi.net'
+
   constructor(private http: HttpClient) { }
 
+  getArticles() {
+    return this.http.get(`${this.baseUrl}/v4/articles`);
+  }
   
 }
