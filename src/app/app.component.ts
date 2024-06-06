@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterOutlet} from '@angular/router';
+import { Router, RouterLink, RouterModule, RouterOutlet} from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { ActionService } from './__services/action.service';
@@ -13,7 +13,7 @@ import { TrimPipe } from './__helpers/trim.pipe';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, CardModule, ButtonModule, DatePipe, TrimPipe, RouterLink, RouterOutlet],
+  imports: [CommonModule, CardModule, ButtonModule, DatePipe, TrimPipe, RouterLink, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 
   articles: any;
 
-  constructor(private actionService: ActionService) { }
+  constructor(private actionService: ActionService, private router: Router) { }
 
   ngOnInit(): void {
     this.getArticles();
