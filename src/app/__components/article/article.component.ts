@@ -13,6 +13,8 @@ import { ActivatedRoute, Params, RouterLink, RouterModule } from '@angular/route
 export class ArticleComponent implements OnInit{
 
   articleId!: number;
+  articleInfo: any;
+
 
   constructor(private actionService: ActionService, private router: ActivatedRoute) {}
 
@@ -26,7 +28,7 @@ export class ArticleComponent implements OnInit{
 
   getArticleById() {
     this.actionService.getArticleById(this.articleId).subscribe( (response: any) => {
-      console.log(response);
+      this.articleInfo = response;
     })
   }
 

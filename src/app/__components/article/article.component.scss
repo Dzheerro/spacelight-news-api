@@ -1,0 +1,104 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        height: 300px;
+        // Warning //
+        // I leave the resolution in percent, because if you stretch the image through pixels, but it will be poor quality. //
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        border: 1px solid #EAEAEA;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+
+        padding: 35px 75px;
+        max-width: 1300px;
+        height: 100%;
+
+        position: relative;
+        top: -100px;
+
+        &__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            font-family: Poppins, sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+
+            margin-bottom: 50px;
+            height: 30px;
+            width: 450px;
+        }
+
+        &__description {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: start;
+
+            font-family: Poppins, sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 400;
+
+            width: inherit;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            border: none;
+            background-color: inherit;
+            cursor: pointer;
+
+            margin-top: 10px;
+            height: 25px;
+            width: 100%;
+
+            p {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                font-family: Poppins, sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+
+                width: 160px;
+                height: 25px;
+                margin-left: 6px;
+                margin-top: 1px;
+            }
+        }
+    }
+}

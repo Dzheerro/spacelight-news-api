@@ -4,6 +4,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 import { DatePipe } from '../../__helpers/date.pipe';
 import { TrimPipe } from '../../__helpers/trim.pipe';
