@@ -69,3 +69,9 @@
     height: 50px;
     width: 600px;
 }
+
+@media (max-width: 1200px) {
+    .p-autocomplete-input {
+        width: 400px;
+    }
+  }

@@ -3,12 +3,13 @@
         Filter by keywords
     </div>
 
-    <p-autoComplete 
-        [(ngModel)]="searchQuery" 
-        [suggestions]="filteredArticles" 
-        (completeMethod)="filterArticles($event)"
-        placeholder="Binance TRC-20 Integration..."
-        field="title" >
+    <p-autoComplete [(ngModel)]="searchQuery" [suggestions]="filteredGroups" (completeMethod)="filterArticles($event)"
+        placeholder="Binance TRC-20 Integration..." field="title" [group]="true">
+        <ng-template let-group pTemplate="group">
+            <div class="flex align-items-center">
+                <span>{{ group.label }}</span>
+            </div>
+        </ng-template>
         <ng-template let-article pTemplate="item">
             <div class="flex align-items-center gap-2">
                 <div [innerHTML]="highlight(article.title)" (click)="redirect(article.id)"></div>
@@ -17,7 +18,7 @@
     </p-autoComplete>
 
     <div class="container__result">
-        <p *ngIf="searchQuery "> Results: {{ filteredArticles.length }} </p>
+        <p *ngIf="searchQuery">Results: {{ totalResults }}</p>
     </div>
 </div>
 
