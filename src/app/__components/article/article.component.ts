@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActionService } from '../../__services/action.service';
 import { ActivatedRoute, Params, RouterLink, RouterModule } from '@angular/router';
+
+import { ActionService } from '../../__services/action.service';
 
 @Component({
   selector: 'app-article',
